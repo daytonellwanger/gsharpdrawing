@@ -30,9 +30,10 @@ func getRandomColor() Color {
     return Color(Rgba32(r, g, b, uint8(0x44)))
 }
 
+const width = 800.0
 func randomTile(ctx IImageProcessingContext) {
     for i := 0; i < 7500; i++ {
-        let randX = float32(normalSample(400.0, 300.0))
+        let randX = float32(normalSample(width / 2.0, 300.0))
         let randY = float32(normalSample(400.0, 300.0))
         let randW = float32(normalSample(50.0, 20.0))
         let randH = float32(normalSample(50.0, 20.0))
